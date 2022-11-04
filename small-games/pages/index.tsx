@@ -53,7 +53,7 @@ export default function Home() {
           </a>
         </div>
       </main> */}
-
+      <h1 style={{ alignSelf: 'center' }}>Welcome to mini games.</h1>
 
     </div>
   )

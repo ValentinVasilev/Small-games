@@ -40,7 +40,7 @@ const Nav = () => {
       fontSize: '20px',
       borderRight: '1px solid',
       borderBottom: '1px solid',
-
+      
     }}>
       {
         LinkArray.map((path: any) => {

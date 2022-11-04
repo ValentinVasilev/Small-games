@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // background-image: url("../assets/pictures/tictactoe_bg.jpg");
+  // background-size: contain;
+  min-height: 800px;
+}
+.title {
+  font-family: cursive;
+  font-weight: 500;
+  text-align: center;
+  background-color: white;
+}
+.cellStyle {
+  border: 1px solid;
+  font-size: 100px;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  cursor: pointer;
+  font-family: cursive;
+  margin: 1vh;
+}
