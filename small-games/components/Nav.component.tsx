@@ -42,7 +42,7 @@ const Nav = () => {
       minWidth: '200px',
       fontFamily: 'monospace',
       textAlign: 'center',
-      fontSize: '20px',
+      fontSize: '23px',
       borderRight: '1px solid',
       borderBottom: '1px solid',
       height: '800px'
@@ -70,7 +70,7 @@ const Nav = () => {
                 alignItems: 'center'
               }}
             >
-              <Image src={path.img} alt="some awesome" width={23} height={23} />
+              <Image src={path.img} alt="some awesome" width={30} height={30} />
               {path.title}
             </Link>
           )
