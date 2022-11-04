@@ -12,10 +12,10 @@ const Layout = ({ children }: LayoutProps) => {
       <Head>
         <title>Small Games</title>
       </Head>
-      <div style={{ display: 'flex' }}>
+      <main style={{ display: 'flex' }}>
         <Nav />
         {children}
-      </div>
+      </main>
       <Footer />
     </>
   )

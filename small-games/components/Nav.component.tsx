@@ -1,23 +1,27 @@
 import { useRouter } from "next/router"
 import Link from "next/link";
-
+import { Images } from '../constants/Images'
+import Image from 'next/image'
 
 type LinkProps = {
   id: number,
   title: string,
-  link: string
+  link: string,
+  img?: any,
 }
 
 const LinkArray: LinkProps[] = [
   {
     id: 0,
     title: 'Hangman',
-    link: '/hangman'
+    link: '/hangman',
+    img: Images.HangmanImg
   },
   {
     id: 1,
     title: 'TicTacToe',
-    link: '/tictactoe'
+    link: '/tictactoe',
+    img: Images.TicTactToe
   },
 ]
 
@@ -29,9 +33,8 @@ const Nav = () => {
     <div style={{
       display: 'flex',
       flexDirection: 'column',
-      maxWidth: '150px',
-      minWidth: '150px',
-      // border: '1px solid',
+      maxWidth: '200px',
+      minWidth: '200px',
       fontFamily: 'monospace',
       textAlign: 'center',
       fontSize: '20px',
@@ -50,9 +53,12 @@ const Nav = () => {
                 margin: '2px 5px',
                 backgroundColor: router.pathname.includes(path.link) ? 'rgb(202 229 223)' : 'white',
                 color: 'rgb(0, 114, 229)',
-
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center'
               }}
             >
+              <Image src={path.img} alt="some awesome" width={23} height={23} />
               {path.title}
             </Link>
           )
