@@ -11,14 +11,19 @@ type LinkProps = {
 }
 
 const LinkArray: LinkProps[] = [
+  // {
+  //   id: 0,
+  //   title: 'Home',
+  //   link: '/',
+  // },
   {
-    id: 0,
+    id: 1,
     title: 'Hangman',
     link: '/hangman',
     img: Images.HangmanImg
   },
   {
-    id: 1,
+    id: 2,
     title: 'TicTacToe',
     link: '/tictactoe',
     img: Images.TicTactToe
@@ -40,8 +45,15 @@ const Nav = () => {
       fontSize: '20px',
       borderRight: '1px solid',
       borderBottom: '1px solid',
-      
+      height: '800px'
     }}>
+      <Link
+        href='/'
+        passHref
+        style={{ margin: '2vh 0vh' }}
+      >
+        Home
+      </Link>
       {
         LinkArray.map((path: any) => {
           return (
