@@ -2,6 +2,9 @@ import { useRouter } from "next/router"
 import Link from "next/link";
 import { Images } from '../constants/Images'
 import Image from 'next/image'
+import ReactTooltip from 'react-tooltip';
+import styles from '../styles/components/nav.component.module.scss'
+
 
 type LinkProps = {
   id: number,
@@ -41,18 +44,7 @@ const Nav = () => {
   const router = useRouter();
 
   return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'column',
-      maxWidth: '200px',
-      minWidth: '200px',
-      fontFamily: 'monospace',
-      textAlign: 'center',
-      fontSize: '23px',
-      borderRight: '1px solid',
-      borderBottom: '1px solid',
-      height: '800px'
-    }}>
+    <div className={styles.navContainer}>
       <Link
         href='/'
         passHref
@@ -64,23 +56,18 @@ const Nav = () => {
         LinkArray.map((path: any) => {
           return (
             <Link
+              className={styles.linkStyles}
               key={path.id}
               href={`${path.link}`}
               passHref
-              style={{
-                margin: '5px 0px',
-                backgroundColor: router.pathname.includes(path.link) ? 'rgb(202 229 223)' : 'white',
-                color: 'rgb(0, 114, 229)',
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                borderLeft: '1px solid black',
-                borderTop: '1px solid black',
-                borderBottom: '1px solid black'
-              }}
+              data-tip={path.title}
             >
-              <Image src={path.img} alt="some awesome" width={30} height={30} />
-              {path.title}
+              <ReactTooltip place="right" type="dark" effect="float" />
+              <div className={styles.linkContainer} style={{
+                backgroundColor: router.pathname.includes(path.link) ? 'rgb(202 229 223)' : 'white',
+              }}>
+                <Image src={path.img} alt="some awesome" width={40} height={40} />
+              </div>
             </Link>
           )
         })

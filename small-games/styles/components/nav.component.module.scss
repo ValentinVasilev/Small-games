@@ -1,0 +1,29 @@
+.navContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 170px;
+  min-width: 170px;
+  font-family: monospace;
+  text-align: center;
+  font-size: 23px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  height: 800px;
+}
+.linkContainer {
+  display: flex;
+  border: 1px solid;
+  width: 50%;
+  justify-content: center;
+  padding: 2vh;
+  transition: all 0.7s;
+}
+.linkContainer:hover {
+  border-radius: 100%;
+}
+
+.linkStyles {
+  margin: 5px 0px;
+  display: flex;
+  justify-content: center;
+}
