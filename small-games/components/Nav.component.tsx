@@ -28,6 +28,12 @@ const LinkArray: LinkProps[] = [
     link: '/tictactoe',
     img: Images.TicTactToe
   },
+  {
+    id: 3,
+    title: 'Rock,Paper or Scissors',
+    link: '/rps',
+    img: Images.RockPaperScissors
+  }
 ]
 
 const Nav = () => {
@@ -62,12 +68,15 @@ const Nav = () => {
               href={`${path.link}`}
               passHref
               style={{
-                margin: '2px 5px',
+                margin: '5px 0px',
                 backgroundColor: router.pathname.includes(path.link) ? 'rgb(202 229 223)' : 'white',
                 color: 'rgb(0, 114, 229)',
                 display: 'flex',
                 justifyContent: 'space-between',
-                alignItems: 'center'
+                alignItems: 'center',
+                borderLeft: '1px solid black',
+                borderTop: '1px solid black',
+                borderBottom: '1px solid black'
               }}
             >
               <Image src={path.img} alt="some awesome" width={30} height={30} />
