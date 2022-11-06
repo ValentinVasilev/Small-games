@@ -51,6 +51,16 @@ const RockPaperScissors = () => {
     } else if (cpu === 2 && player === 1) {
       setCpuWins((win: any) => win + 1)
       setPLayerLoses((lose: any) => lose + 1)
+    } else if (
+      player === 0 && cpu === 0 ||
+      player === 1 && cpu === 1 ||
+      player === 2 && cpu === 2
+    ) {
+      setPlayerWins((win: any) => win + 0)
+      setPLayerLoses((lose: any) => lose + 0)
+      setCpuWins((win: any) => win + 0)
+      setCpuLoses((lose: any) => lose + 0)
+      
     }
   }
   useEffect(() => {
