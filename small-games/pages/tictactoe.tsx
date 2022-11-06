@@ -120,7 +120,7 @@ const TicTacToe = () => {
       {winner && (
         <>
           <p style={{ color: 'green', fontSize: '35px' }}>{winner.toUpperCase()} is the winner!</p>
-          <button style={{cursor: 'pointer', fontSize: '25px', fontFamily:"cursive"}} onClick={() => handleRestart()}>Play Again</button>
+          <button style={{ cursor: 'pointer', fontSize: '25px', fontFamily: "cursive" }} onClick={() => handleRestart()}>Play Again</button>
         </>
       )}
     </div>
