@@ -36,6 +36,12 @@ const LinkArray: LinkProps[] = [
     title: 'Rock,Paper or Scissors',
     link: '/rps',
     img: Images.RockPaperScissors
+  },
+  {
+    id: 4,
+    title: 'Memory Game',
+    link: '/memory',
+    img: Images.Memory
   }
 ]
 
