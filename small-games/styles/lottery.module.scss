@@ -1,0 +1,27 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 800px;
+  margin-bottom: 10vh;
+  border: 1px solid;
+}
+.title {
+  font-family: cursive;
+  font-weight: 500;
+  text-align: center;
+}
+.winingContainer {
+  display: flex;
+  min-width: 200px;
+  justify-content: space-evenly;
+  font-size: 25px;
+  // color: white;
+  font-family: serif;
+}
+.btn {
+  cursor: pointer;
+  padding: 1vh;
+  font-size: 1rem;
+}
