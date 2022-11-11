@@ -36,6 +36,14 @@ const Lottery = () => {
 
   // Generate the game
   const generateGame = () => {
+
+
+    if (playerWallet > 3) {
+      setPlayerWallet((prev) => prev - 3)
+    } else if (playerWallet < 3) {
+      alert('Not enough money!')
+    }
+
     generateWiningPot()
 
     if (winingNumbers.length > 0) {
@@ -85,11 +93,14 @@ const Lottery = () => {
           </section>
           <section className={styles.playerSection}>
             <h3>Wallet: ${playerWallet}</h3>
-            {
-              myNumbers.map((num: number, index: number) => {
-                return <p key={index}>{num}</p>
-              })
-            }
+            <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+              {
+                myNumbers.map((num: number, index: number) => {
+                  return <p key={index}>{num}</p>
+                })
+              }
+            </div>
+
             <button className={styles.btn} onClick={() => generatePlayerNumbers()}>Generate my numbers</button>
           </section>
         </div>
