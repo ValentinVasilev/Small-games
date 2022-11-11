@@ -42,6 +42,12 @@ const LinkArray: LinkProps[] = [
     title: 'Memory Game',
     link: '/memory',
     img: Images.Memory
+  },
+  {
+    id: 5,
+    title: 'Lottery',
+    link: '/lottery',
+    img: Images.Lottery
   }
 ]
 

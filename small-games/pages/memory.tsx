@@ -12,10 +12,10 @@ const Memory = () => {
       <h1 className={styles.title}>Memory Game</h1>
       <select id="cars" onChange={(e: any) => setSize(e.currentTarget.value)} >
         <option defaultChecked value={0}>Pick a size</option>
-        <option value={3}>3x3 (noob)</option>
-        <option value={4}>4x4 (Some experiance)</option>
-        <option value={5}>5x5 (Experianced)</option>
-        <option value={6}>6x6 (Expert)</option>
+        <option value={4}>8 (noob)</option>
+        <option value={6}>12 (Some experiance)</option>
+        <option value={8}>16 (Experianced)</option>
+        <option value={10}>20 (Expert)</option>
       </select>
       <Field rows={size} columns={size} />
     </div>
