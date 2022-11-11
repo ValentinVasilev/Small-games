@@ -19,12 +19,14 @@ const Lottery = () => {
     for (let index = 0; index < rotation; index++) {
       const element = Math.floor(Math.random() * 49);
 
-      if (!winingNumbers.includes(element)) {
-        setWiningNumbers((prev) => [...prev, element])
-      } else {
+      if (winingNumbers.includes(element)) {
+        console.log('this number exist', element)
+        console.log(winingNumbers)
         rotation += 1;
         continue;
       }
+
+      setWiningNumbers((prev) => [...prev, element])
     }
   }
 
@@ -59,16 +61,19 @@ const Lottery = () => {
   const generatePlayerNumbers = () => {
 
     let rotation = 6;
+    let winingNumbersArray: number[] = []
     for (let index = 0; index < rotation; index++) {
       const element = Math.floor(Math.random() * 49);
 
-      if (!winingNumbers.includes(element)) {
-        setMyNumbers((prev) => [...prev, element])
+      if (!winingNumbersArray.includes(element)) {
+        winingNumbersArray.push(element)
       } else {
         rotation += 1;
         continue;
       }
     }
+
+    return setWiningNumbers(winingNumbersArray);
   }
 
   return (
