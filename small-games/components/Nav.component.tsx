@@ -1,7 +1,7 @@
 import { useRouter } from "next/router"
 import Link from "next/link";
 import { Images } from '../constants/Images'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import ReactTooltip from 'react-tooltip';
 import styles from '../styles/components/nav.component.module.scss'
 
@@ -10,15 +10,10 @@ type LinkProps = {
   id: number,
   title: string,
   link: string,
-  img?: any,
+  img: StaticImageData,
 }
 
 const LinkArray: LinkProps[] = [
-  // {
-  //   id: 0,
-  //   title: 'Home',
-  //   link: '/',
-  // },
   {
     id: 1,
     title: 'Hangman',
@@ -65,7 +60,7 @@ const Nav = () => {
         Home
       </Link>
       {
-        LinkArray.map((path: any) => {
+        LinkArray.map((path: LinkProps) => {
           return (
             <Link
               className={styles.linkStyles}
